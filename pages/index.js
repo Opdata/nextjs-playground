@@ -50,12 +50,30 @@ function HomePage(props) {
 // Pre-rendering 1 getStaticProps() {
 
 // }
+/*
 export async function getStaticProps() {
   // fetch data from an API
 
   return {
     props: {
-      meetups: DUMMY_MEETUPS,
+      meetups: dummy_list,
+    },
+    revalidate: 1,
+  };
+}
+*/
+
+// Pre-rendering 2 getServerSideProps() {
+
+// }
+export async function getServerSideProps(context) {
+  // fetch data from an API
+  const req = context.req;
+  const res = context.res;
+
+  return {
+    props: {
+      meetups: dummy_list,
     },
   };
 }
