@@ -1,13 +1,20 @@
-import MainNavigation from './MainNavigation';
-import classes from './Layout.module.css';
+import { ReactNode } from 'react';
 
-function Layout(props) {
+import Gnb from 'components/gnb/Gnb';
+
+import styles from 'components/layout/Layout.module.css';
+
+type LayoutProps = {
+  children: ReactNode;
+};
+
+const Layout = ({ children }: LayoutProps) => {
   return (
     <div>
-      <MainNavigation />
-      <main className={classes.main}>{props.children}</main>
+      <Gnb />
+      <main className={styles.main}>{children}</main>
     </div>
   );
-}
+};
 
 export default Layout;
