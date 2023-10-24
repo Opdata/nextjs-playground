@@ -1,4 +1,6 @@
-import AddMeetUpForm from '../../components/meetups/NewMeetupForm';
+'use client';
+
+import AddMeetUpForm from 'components/meetups/NewMeetupForm';
 
 function NewMeetUpForm() {
   const AddMeetUpHandler = (enteredMeetUpData) => {
